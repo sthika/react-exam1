@@ -45,8 +45,8 @@ const rates = {
   JPY: 'https://upload.wikimedia.org/wikipedia/commons/7/7a/500_Belarus_2009_front.jpg',
 };
 
-const Details = ({ currency }) => {
-
+const Details = ({ currency, data }) => {
+  if (Object.keys(data).length) {
   return (
     <div className='details'>
       <div className='container'>
@@ -54,11 +54,15 @@ const Details = ({ currency }) => {
           <p className='details__header'>{currency}</p>
           <div className='details__img'>
             <img src={rates[`${currency}`]} alt='' />
+            <p>
+          {currency}: {data.rates[`${currency}`]}
+        </p>
           </div>
         </div>
       </div>
     </div>
   );
+  }
 };
 
 export default Details;

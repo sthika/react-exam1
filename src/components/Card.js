@@ -5,14 +5,14 @@ const Card = ({ data, currency }) => {
   if (Object.keys(data).length) {
 
     return (
-      <div className='card'>
+      <div className='main__card'>
         <p>Date: {data.date}</p>
         <p>Base: {data.base}</p>
         <p>
           {currency}: {data.rates[`${currency}`]}
         </p>
         <NavLink to='/Details' className='header__link'>
-          <button>See all</button>
+          <button className='main__card-btn'>See all</button>
         </NavLink>
       </div>
     );

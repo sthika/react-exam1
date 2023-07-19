@@ -12,6 +12,8 @@ function App() {
 
   const [currency,setCurrency] = useState("AUD")
 
+  const [data, setData] = useState({})
+
 const handleInput = (e) => {
   let a = e.target.value
   setInpValue(a.toUpperCase())
@@ -27,8 +29,8 @@ const handleKeyDown = (e) => {
       <Router> 
         <Header handleInput={handleInput} handleKeyDown={handleKeyDown}/>
         <Routes> 
-            <Route path="/" element={<Main currency = {currency}/>}/> 
-            <Route path="/Details" element={<Details currency = {currency}/>}/> 
+            <Route path="/" element={<Main currency = {currency} setdata={setData}/>}/> 
+            <Route path="/Details" element={<Details currency = {currency} data ={data}/>}/> 
         </Routes>
       </Router>
     </div>
