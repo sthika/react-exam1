@@ -11,7 +11,7 @@ const Header = ({handleInput, handleKeyDown}) => {
           <NavLink to='/' className='header__link'>
             Home
           </NavLink>
-          <input type='text' placeholder='Выберите валюту' onInput={handleInput} onKeyDown={handleKeyDown}/>
+          <input name='input' type='text' placeholder='Выберите валюту' onInput={handleInput} onKeyDown={handleKeyDown}/>
         </div>
       </div>
     </header>

@@ -13,3 +13,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+.card {
+    padding: 30px;
+    background-color: beige;
+}
